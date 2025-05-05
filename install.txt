@@ -1,0 +1,27 @@
+1- Install Livewire : composer require livewire/livewire (https://livewire.laravel.com/docs/quickstart)
+2- Install broadcasting : php artisan install:broadcasting  (https://laravel.com/docs/12.x/broadcasting#main-content)
+3- Install Pusher : composer require pusher/pusher-php-server (https://laravel.com/docs/12.x/broadcasting#pusher-channels)
+4- Install Laravel Horizon : composer require laravel/horizon & php artisan horizon:install (https://laravel.com/docs/12.x/horizon#main-content) - http://127.0.0.1:8000/horizon
+5- Setup env
+BROADCAST_CONNECTION=pusher
+BROADCAST_DRIVER=pusher
+QUEUE_CONNECTION=redis
+PUSHER_APP_KEY=""
+PUSHER_APP_SECRET=""
+PUSHER_APP_ID=""
+PUSHER_APP_CLUSTER=""
+APP_TIMEZONE="Asia/Kuala_Lumpur"
+
+How Do I think
+1- Create a reactive component 
+2- Handle drag& drop and input for file
+3- Table that show & sort
+4- Handle the storage of the file (store)
+5- Process the file in chunk
+ - count how many row & chunk it to X per jobs
+ - process all job using batch
+ - notify user through event + pusher for every process (pending/processing/failed/complete)
+ - store product using upsert 
+6- migration & factory & model
+7- service class to Handle
+8- start 1-7 with tdd(unit test)
